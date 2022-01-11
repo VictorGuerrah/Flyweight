@@ -9,9 +9,9 @@ public class Estrela {
 
     public String obterEstrela() {
         return "Estrela{ " +
-                "nome = " + tipoEstrela.getNome() + '\n'+
-                "cor = " + tipoEstrela.getCor() + '\n'+
-                "tamanho = " + this.composicao + '\n'+
-                "}";
+                "nome = " + tipoEstrela.getNome() +
+                ", cor = " + tipoEstrela.getCor() +
+                ", tamanho = " + this.composicao +
+                "}\n";
     }
 }

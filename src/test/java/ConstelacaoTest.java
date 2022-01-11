@@ -1,6 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import java.lang.constant.Constable;
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +13,11 @@ class ConstelacaoTest {
         constelacao.mapearEstrela("Sirius", "Azul", 2380700, "72% Hidrogênio / 27% Helio");
         constelacao.mapearEstrela("Proxima Centauri", "Vermelho", 214550, "72% Hidrogênio / 27% Helio");
 
-        assertEquals("saida", constelacao.obterConstelacao());
+        List<String> estrelas = Arrays.asList(
+                "Estrela{ nome = Sol, cor = Branco, tamanho = 72% Hidrogênio / 27% Helio}\n",
+                "Estrela{ nome = Sirius, cor = Azul, tamanho = 72% Hidrogênio / 27% Helio}\n",
+                "Estrela{ nome = Proxima Centauri, cor = Vermelho, tamanho = 72% Hidrogênio / 27% Helio}\n");
+
+        assertEquals(estrelas, constelacao.obterConstelacao());
     }
 }
